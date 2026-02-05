@@ -467,6 +467,18 @@ Asho duijon eksathe kori video call e.`
 };
 window.onload=function(){
 let id=localStorage.getItem("id");
-if(id){document.getElementById("title").innerText="Open When";
-document.getElementById("text").innerText=letters[id];}
+
+if(id){
+document.getElementById("title").innerText="Open When";
+document.getElementById("text").innerText=letters[id];
+
+if(id=="11"){
+document.getElementById("voiceBox").style.display="block";
 }
+}
+
+document.getElementById("playVoice").onclick=function(){
+document.getElementById("voiceAudio").play();
+}
+}
+
